@@ -60,7 +60,8 @@ class ProductsForm extends FormDisplay {
       "options" => ["Days", "Weeks", "Months", "Years"],
       "values" => ["days", "weeks", "months", "years"],
       "data-dojo-type" => "starbug/form/Dependent",
-      "data-dojo-props" => "key:'payment_type', values:['recurring']"
+      "data-dojo-props" => "key:'payment_type', values:{'payment_type': ['recurring']}",
+      "data-depend" => "payment_type"
     ]);
     $this->add([
       "interval",
@@ -68,7 +69,8 @@ class ProductsForm extends FormDisplay {
       "pane" => "right",
       "info" => "For example, enter 6 and select a recurrence unit of 'Months' to bill every 6 months.",
       "data-dojo-type" => "starbug/form/Dependent",
-      "data-dojo-props" => "key:'payment_type', values:['recurring']"
+      "data-dojo-props" => "key:'payment_type', values:{'payment_type': ['recurring']}",
+      "data-depend" => "payment_type"
     ]);
     $this->add([
       "limit",
@@ -76,7 +78,8 @@ class ProductsForm extends FormDisplay {
       "pane" => "right",
       "info" => "Enter a number to limit the total number of payments.",
       "data-dojo-type" => "starbug/form/Dependent",
-      "data-dojo-props" => "key:'payment_type', values:['recurring']"
+      "data-dojo-props" => "key:'payment_type', values:{'payment_type': ['recurring']}",
+      "data-depend" => "payment_type"
     ]);
 
     $this->add(["categories", "input_type" => "multiple_select", "from" => "product_categories", "pane" => "right"]);
